@@ -96,7 +96,7 @@ export default function NewsLetterSignUpForm() {
         it will be available soon
         <br />{' '}
         <span style={{ color: '#333', fontWeight: 'bold', fontSize: '18px' }}>
-          So, join the waitlist of waitlist.wtf first
+          So, join the waitlist first
         </span>
         <br /> we will notify you when the product is ready
         <br />

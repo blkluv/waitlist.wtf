@@ -9,4 +9,4 @@ we will notify you when the product is ready
 
 don't fomo please~~
 
-https://waitlist.wtf
+https://waitlist.arvrtise.com

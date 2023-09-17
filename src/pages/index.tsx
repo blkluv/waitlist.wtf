@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
-import Script from 'next/script';
+import Script from 'next/script'; // Import the Script component from Next.js
 import NewsLetterSignUpForm from '../components/form';
 import toast, { Toaster } from 'react-hot-toast';
 import { Tooltip } from '@nextui-org/react';
@@ -13,26 +13,16 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Waitlist.wtf</title>
-        <meta
-          name="description"
-          content="join all ai product waitlist by one click"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/wait.png" />
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-HLPJZF3XF1"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HLPJZF3XF1');`,
-          }}
-        ></script>
+        {/* ... other head elements ... */}
+        {/* Use Script component to load external script and provide inline script */}
+        <Script id="gtag-script" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-CWY24XKJXW');
+          `}
+        </Script>
       </Head>
       <main
         className={styles.main}
@@ -67,9 +57,9 @@ export default function Home() {
               }}
               weight="bold"
             >
-              Waitlist.wtf{' '}
+              🅰️ Waitlist {' '}
               <a
-                href="https://waitlist-wtf.gitbook.io/whitepaper/"
+                href="https://twitter.com/arvrtise"
                 style={{
                   fontSize: '14px',
                   color: '#999',
@@ -95,7 +85,7 @@ export default function Home() {
                     fill="#666"
                   ></path>
                 </svg>
-                WhitePaper
+                Twitter
               </a>
             </Text>
 
@@ -107,7 +97,7 @@ export default function Home() {
               }}
               weight="bold"
             >
-              Join all AI product waitlist in one place
+              Join the 🅰️rvrtise waitlist to receive notifications of all the hottest upcoming products.
             </Text>
           </h1>
           <NewsLetterSignUpForm />
@@ -122,7 +112,7 @@ export default function Home() {
             }}
           >
             <a
-              href="https://github.com/0xYootou/waitlist.wtf"
+              href="https://github.com/blkluv/waitlist.wtf"
               style={{}}
               target="_blank"
             >
@@ -163,14 +153,14 @@ export default function Home() {
             <a
               onClick={() => {
                 navigator.clipboard.writeText(
-                  `一个快捷加入所有 ai 产品 waitlist 的产品，https://waitlist.wtf 
+                  `一个快捷加入所有 ai 产品 waitlist 的产品，https://waitlist.arvrtise.com
 =============
 令人绝望的是，目前网站功能还没开始开发，需要先申请加入 waitlist.wtf 的 waitlist，开发好了会通知大家😂😂
 
 -------------
-A product that quickly joins the waitlist of all ai products, https://waitlist.wtf
+A product that quickly joins the waitlist of all ai products, https://waitlist.arvrtise.com
 =============
-It is desperate that the website function has not yet been developed. You need to apply to join the waitlist of waitlist.wtf. They will notify you when the development is completed 😂😂`
+It is desperate that the website function has not yet been developed. You need to apply to join the waitlist of waitlist.arvrtise.com. They will notify you when the development is completed 😂😂`
                 );
                 toast.success('Copied to clipboard successfully!');
               }}
